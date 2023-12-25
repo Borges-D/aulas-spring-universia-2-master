@@ -1,16 +1,27 @@
 table {
   border-collapse: collapse;
+  width: 100%;
 }
 
 table td,
 table th {
   border: 2px solid black;
   padding: 20px;
+  text-align: left; /* Adjust text alignment as needed */
 }
 
-form input {
+table th {
+  background-color: #f2f2f2; /* Optional: Add background color to header cells */
+}
+
+form input{
   display: block;
   padding: 5px 10px;
   margin-bottom: 20px;
   width: 300px;
+}
+
+/* Add a bit of spacing between the table and the form */
+table {
+  margin-bottom: 20px;
 }

@@ -1,7 +1,4 @@
-package com.soulcode.estudandospring.model;
-
 import java.time.LocalDate;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,30 +6,37 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+// Declaração da entidade Cliente que será mapeada para uma tabela no banco de dados
 @Entity
 @Table(name = "clientes")
 public class Cliente {
 
+  // Identificador único gerado automaticamente pelo banco de dados
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Integer id;
 
+  // Atributo que representa o nome do cliente na tabela "clientes"
   @Column(nullable = false, length = 100)
   private String nome;
 
+  // Atributo que representa o email do cliente na tabela "clientes"
   @Column(nullable = false, length = 120)
   private String email;
 
+  // Atributo que representa a preferência do cliente na tabela "clientes"
   @Column(nullable = false, length = 50)
   private String preferencia;
 
+  // Atributo que representa a data de filiação do cliente na tabela "clientes"
   @Column(nullable = false)
   private LocalDate filiacao;
 
+  // Construtor padrão vazio necessário para JPA
   public Cliente() {
-
   }
-  
+
+  // Métodos getters e setters para acessar e modificar os atributos da classe
   public Integer getId() {
     return id;
   }
@@ -40,6 +44,7 @@ public class Cliente {
   public void setId(Integer id) {
     this.id = id;
   }
+
   public String getNome() {
     return nome;
   }
